@@ -40,7 +40,7 @@ public class ProducerConsumerLab {
     }
 
     /**
-     * TODO 1: Implement Producer class
+    
      * Create a class that implements Runnable and:
      * 1. Has a private SharedBuffer field
      * 2. Has a constructor that accepts SharedBuffer parameter
@@ -52,11 +52,11 @@ public class ProducerConsumerLab {
      *    - In catch block, print "[Producer] was interrupted"
      */
     static class Producer implements Runnable {
-        // TODO 1: Implement Producer class here
+        
         // Step 1: Add private SharedBuffer field
         // Step 2: Add constructor
 
-        private SharedBuffer buffer;
+        private  SharedBuffer buffer;
 
         public Producer(SharedBuffer buffer) {
             // Initialize the buffer field
@@ -79,7 +79,6 @@ public class ProducerConsumerLab {
     }
 
     /**
-     * TODO 2: Implement Consumer class
      */
     static class Consumer implements Runnable {
         // TODO 2: Implement Consumer class here
@@ -100,7 +99,7 @@ public class ProducerConsumerLab {
             // Add your implementation here
              try {
                 for (int i = 0; i < 10; i++) {
-                    buffer.consume(i);
+                    buffer.consume();
                 }
                 System.out.println("[Consumer] finished consuming 10 items!");
             } catch (InterruptedException e) {
